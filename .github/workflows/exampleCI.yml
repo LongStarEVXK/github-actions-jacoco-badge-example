@@ -18,7 +18,7 @@ jobs:
         working-directory: .
         run: |
           chmod +x gradlew
-          ./gradlew build -x test
+          gradle build -x test
   test:
     runs-on: ubuntu-latest
     needs: build
@@ -34,7 +34,7 @@ jobs:
           working-directory: .
           run: |
             chmod +x gradlew
-            ./gradlew test
+            gradle test
 
         - name: Jacoco report
           id: jacoco
